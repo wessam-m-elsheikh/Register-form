@@ -123,6 +123,9 @@ input[type="submit"] {
     top: 10px;
     left: 10px;
   }
+   main {
+     width:70%;
+  }
 
   h1 {
     font-size: 25px;

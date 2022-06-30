@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Register Now</title>
+  </head>
+  <body>
+    <main>
+      <img src="leaf-logo.svg" alt="logo" id="logo" />
+      <h1 id="title">Register Now</h1>
+      <p id="description">register your trip now with Natours</p>
+      <form action="" id="survey-form">
+        <label id="name-label"
+          >Full Name:
+          <input type="text" id="name" placeholder="Enter Your Name" required />
+        </label>
+        <label id="email-label"
+          >Email Address:
+          <input
+            type="email"
+            id="email"
+            required
+            pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}\.com
+        "
+            placeholder="Enter Your Email"
+          />
+        </label>
+        <label id="number-label"
+          >Age:
+          <input
+            type="number"
+            id="number"
+            pattern="[1-9]"
+            min="13"
+            max="120"
+            placeholder="Enter Your Age"
+            required
+          /> </label
+        ><label>Choose a Trip:</label>
+        <select name="dropdown" id="dropdown" class="choice-label">
+          <option value="">(Choose One)</option>
+          <option value="1">The Sea Surfer</option>
+          <option value="2">The Forrest Hiker</option>
+          <option value="3">The Snow Adventurer</option>
+        </select>
+        <fieldset id="payment-methods">
+          <label class="choice-label">How would you like to pay?</label>
+          <input type="radio" name="radio" value="visa" />
+          <label class="choice-color">Visa</label><br />
+          <input type="radio" name="radio" value="cash" />
+          <label class="choice-color">Cash</label>
+        </fieldset>
+        <fieldset id="checkbox-set">
+          <label class="choice-label">How did you know Natours: </label>
+          <label class="choice-label choice-color"
+            ><input type="checkbox" value="0" /> Facebook.</label
+          >
+          <label class="choice-label choice-color"
+            ><input type="checkbox" value="1" /> Instagram.</label
+          >
+          <label class="choice-label choice-color"
+            ><input type="checkbox" value="2" /> Google search.</label
+          >
+          <label class="choice-label choice-color"
+            ><input type="checkbox" value="3" /> Recommended by a friend.</label
+          >
+        </fieldset>
+        <label class="choice-label"
+          >Your Comment:<textarea
+            name="text"
+            id="textarea"
+            cols="30"
+            rows="5"
+            placeholder="Your Comment...."
+          ></textarea>
+        </label>
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </main>
+  </body>
+</html>

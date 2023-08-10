@@ -1,67 +1,93 @@
+/* url("https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"); */
+
+/* google font */
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;500;700;900&display=swap");
+
+/* ----------------------------------------------- */
+/* resets */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Tajawal", sans-serif;
-  font-size: 25px;
-  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
 }
 
+img {
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  letter-spacing: 1px;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #000;
+  margin-right: 0.5rem;
+}
+
+/* --------------------------------------------- */
+/* styles */
+
 body {
+  font-family: "Tajawal", sans-serif;
   height: 100%;
   background-image: linear-gradient(
       to bottom right,
       rgba(15, 42, 133, 0.8),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    url("./imgs/bg.jpg");
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+.logo {
+  width: 6rem;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  margin-bottom: 2rem;
+}
+
 main {
   width: 50%;
-  margin: 5em auto;
+  margin: 7em auto;
   max-height: 80%;
+  color: #e3b64f;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 @media only screen and (max-width: 1024px) {
-  main {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 900px) {
   main {
     width: 90%;
   }
 }
 
-#logo {
-  width: 80px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
 h1,
 p {
   text-align: center;
-  color: #e3b64f;
-  font-weight: 700;
-  text-transform: capitalize;
-  margin: 20px 0;
 }
 
 h1 {
-  font-weight: 900;
-  font-size: 40px;
-  letter-spacing: 0.2rem;
   color: #0f2a85;
+  font-weight: 900;
+  font-size: 4rem;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  margin-bottom: -10px;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
 }
 
 form {
@@ -70,83 +96,114 @@ form {
     rgba(15, 42, 133, 0.8),
     rgba(0, 0, 0, 0.7)
   );
-  color: rgb(227, 182, 79);
-  padding: 30px;
-  box-shadow: 1px 10px 14px rgba(0, 0, 0, 0.8);
+  padding: 3rem;
+  box-shadow: 0rem 1.5rem 2rem rgba(0, 0, 0, 0.8);
 }
 
-input,
-textarea,
-.choice-label {
+label {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   display: block;
-  margin: 10px 0;
-  padding: 5px;
 }
 
-fieldset {
-  border: none;
-  padding: 30px 0;
-}
-
-fieldset:not(:last-of-type) {
-  padding-bottom: 0;
-}
 #email,
 #name,
-#number,
+#age,
 textarea,
 select {
   width: 100%;
-  border: 2px solid #c9cee1;
-  border-radius: 5px;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.8);
+  color: #000;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  margin-top: 0.7rem;
+  box-shadow: 0rem 1.5rem 2rem rgba(0, 0, 0, 0.8);
+}
+
+input::placeholder {
+  color: rgba(128, 128, 128, 0.5);
+}
+
+fieldset {
+  margin: 3rem 0;
+}
+
+fieldset:not(:last-of-type) {
+  margin-bottom: 0;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+.pay {
+  width: 2rem;
   display: inline-block;
   vertical-align: middle;
+  margin-left: 0.5rem;
 }
 
-.choice-color {
-  color: #c9cee1;
+.facebook {
+  fill: #5978dd;
+}
+.insta {
+  fill: rgb(195, 63, 15);
 }
 
-input[type="submit"] {
-  width: 60%;
+.google {
+  fill: rgb(157, 5, 5);
+}
+
+.submit {
+  width: 30%;
+  margin: 2rem auto;
+}
+.submit-btn {
+  width: 100%;
   color: #0f2a85;
   font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  border: none;
-  margin: 20px auto;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 1rem 1.5rem;
   background-color: rgb(227, 182, 79);
-  box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.8);
+  transition: all 0.4s ease-in-out;
 }
 
-@media screen and (max-width: 700px) {
-  * {
-    font-size: 18px;
-  }
+.submit-btn:hover {
+  background-color: #0f2a85;
+  color: #e3b64f;
+}
+.submit-btn:active {
+  transform: translateY(-5px);
+}
 
-  #logo {
-    width: 60px;
-    top: 10px;
-    left: 10px;
-  }
-
+@media screen and (max-width: 500px) {
   h1 {
-    font-size: 25px;
-    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
   }
   p {
-    font-weight: 500;
+    font-size: 1.6rem;
   }
-  input,
-  select,
+
+  form {
+    padding: 1.5rem;
+  }
+
+  #email,
+  #name,
+  #age,
+  label,
   textarea,
   select {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .submit {
+    width: 80%;
   }
 }

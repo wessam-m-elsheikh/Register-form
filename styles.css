@@ -119,10 +119,18 @@ select {
   padding: 0.5rem;
   margin-top: 0.7rem;
   box-shadow: 0rem 1.5rem 2rem rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease-in-out;
 }
 
 input::placeholder {
   color: rgba(128, 128, 128, 0.5);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  transform: scale(1.01);
 }
 
 fieldset {
